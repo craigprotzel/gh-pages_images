@@ -6,11 +6,12 @@ const slider = document.querySelector(".slider")
 
 // go look at this json file as the resource
 // this is the "promise"
-fetch("data/moons.json")
+fetch("./data/moons.json")
     .then(function(response) {
         return response.json()
     })
     .then(function(data) {
+        console.log(data);
         // there is a slider, listen for an input
         slider.addEventListener("input", function(){
              console.log(slider.value)
